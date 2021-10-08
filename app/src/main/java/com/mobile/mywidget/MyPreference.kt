@@ -6,7 +6,7 @@ const val PREFERENCE_NAME = "preference"
 const val PREFERENCE_APP_ID = "preference_app_id"
 
 class MyPreference(context: Context) {
-    val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
+    private val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
 
     fun updateWidgetId(ids: MutableSet<String>) {
         val editor = preference.edit()
